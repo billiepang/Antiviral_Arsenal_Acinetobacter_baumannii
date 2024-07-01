@@ -1,0 +1,5 @@
+# The following code was used to retrieve translated protein fasta files for all available complete Acinetobacter genomes from NCBI
+
+wget -i ../acinetobacter_assembly_ftp_path_translated_cds.faa
+
+# All 923 available (16/04/2024) translated protein fasta files were then moved into a folder called 'translated_faa.list'
