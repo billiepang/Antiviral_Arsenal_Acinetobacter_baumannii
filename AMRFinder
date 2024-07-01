@@ -1,0 +1,7 @@
+# The following code was used to perform AMRFinder to detect known antimicrobial resistant genes in all 923 Acinetobacter genomes
+
+for i in `cat acinetobacter_genomes/genome_id_list`; amrfinder --plus -p acinetobacter_genomes/${i}_translated_cds.faa -g acinetobacter_genomes/${i}_genomic.gff > amrfinder/${i}_amr.txt; done
+
+# --plus is a flag that enables advanced mode, providing additional information about the resistance genes.
+# -p specifies the input file containing protein sequences in FASTA format (${i}_translated_cds.faa).
+# -g specifies the input file containing genome annotations in GFF format (${i}_genomic.gff).
