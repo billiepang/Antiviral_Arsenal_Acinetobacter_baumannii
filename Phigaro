@@ -1,6 +1,7 @@
 # The following code was used to perform Phigaro on all Acinetobacter genomes
 
 # Data was divided into four groups to allow for simultaneous analysis; cbaa, cbab, cbac, and cbad.
+# Fasta files for all samples in fna format were first prepared
 for i in `cat dnaapler/cbaa`; do phigaro -f dnaapler/prokka/${i}/${i}_dnaA.fna -c phages/phigaro_config -o ${i}_phages -p --not-open -t 4 -d -e tsv bed; done
 for i in `cat dnaapler/cbab`; do phigaro -f dnaapler/prokka/${i}/${i}_dnaA.fna -c phages/phigaro_config -o phages_billie/${i}_phages -p --not-open -t 4 -d -e tsv bed; done
 for i in `cat dnaapler/cbac`; do phigaro -f dnaapler/prokka/${i}/${i}_dnaA.fna -c phages/phigaro_config -o phages_billie/${i}_phages -p --not-open -t 4 -d -e tsv bed; done
