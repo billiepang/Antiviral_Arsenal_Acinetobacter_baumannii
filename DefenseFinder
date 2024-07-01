@@ -1,0 +1,3 @@
+# The following code was used to run DefenseFinder on 923 Acinetobacter genomes from the NCBI RefSeq database.
+
+for i in `cat translated_faa.list`; do defense-finder run -o defence-finder-billie/${i}_df_results acinetobacter_genomes/${i}; done
