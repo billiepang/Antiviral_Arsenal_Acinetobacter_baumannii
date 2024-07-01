@@ -1,0 +1,5 @@
+#Seqkit was used to locate regions with the motif CAGNNNNNNNGTT
+seqkit locate -d -c -p CAGNNNNNNNGTT --bed ../abc141/A_baumannii_ABC141_genome.fasta.split.fasta >  A_baumannii_ABC141_genome.CAGNNNNNNNGTT.circ.bed
+
+# intersect was used to find  overlapping intervals between two sets of genomic features. 
+bedtools intersect -wa -wb -a A_baumannii_ABC141_genome.CAGNNNNNNNGTT.circ.bed -b SQK-NBD114-24_barcode16.ABC141.sorted.6mA.bed > SQK-NBD114-24_barcode16_m6A_CAGNNNNNNNGTT.bed
